@@ -9,4 +9,8 @@ class Product < ActiveRecord::Base
   validates :title, length: { minimum: 10,
             too_short: "title must be at least %{count} characters" }
 
+  def self.latest
+    Product.order(:updated_at).last
+  end
+
 end
