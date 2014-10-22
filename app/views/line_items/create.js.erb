@@ -1,3 +1,7 @@
+// hide any leftover flash messages
+$('#notice').hide();
+
+// use smooth animation to make the cart first appear
 if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
 
 // jquery to render the cart in the sidebar
